@@ -54,8 +54,8 @@ This PoC, **`sudo2root`**, adapts the original technique by compiling a custom N
 ## Usage
 
 ```bash
-chmod +x sudo2root.sh
-./sudo2root.sh
+chmod +x sudoinject.sh
+./sudoinject.sh
 ````
 
 After the exploit completes, run:
@@ -70,7 +70,7 @@ whoami  # => root
 ## File Structure
 
 ```text
-sudo2root.sh                 # Main exploit script
+sudoinject.sh                 # Main exploit script
 libnss_/sudo2root1337.so.2   # Malicious NSS module (compiled)
 sudo2root/etc/nsswitch.conf  # Custom nsswitch pointing to fake module
 /usr/local/bin/.suidshell    # Final setuid root shell
